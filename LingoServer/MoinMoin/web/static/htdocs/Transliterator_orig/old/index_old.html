@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript" src="dropdowntabfiles/dropdowntabs.js"></script>
+
+<!-- CSS for Drop Down Tabs Menu #1 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/ddcolortabs.css" />
+<!-- CSS for Drop Down Tabs Menu #2 -->
+<link rel="stylesheet" type="text/css" href="dropdowntabfiles/bluetabs.css" />
+<script language="text/javascript" src="transcodes1.js" type="text/javascript"></script>
+<script language="text/javascript" src="translit.js" type="text/javascript"></script>
+<script language="text/javascript" src="examples.js" type="text/javascript"></script>
+<script language="text/javascript" src="interface.js" type="text/javascript"></script>
+<!--<link rel="shortcut icon" href="/rtvik/sites/default/files/pixture_reloaded_favicon_0.png" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/book/book.css?h" />
+
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/fckeditor/fckeditor.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/node/node.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/system/defaults.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/system/system.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/system/system-menus.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/user/user.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/modules/forum/forum.css?h" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/sites/default/themes/pixture_reloaded/layout.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/rtvik/sites/default/files/color/pixture_reloaded-23c44b16/style.css" />
+-->
+<link type="text/css" rel="stylesheet" media="all" href="faulkner.css" />
+
+</head>
+<body onload="statusupdate('reset');">
+<h1>Romanakßarí</h1>
+<h3>An experiment with Indian languages</h3>
+<p style="font-family:'Droid Sans', Siddhanta, 'Sanskrit 2003';" >Romanákßarí is not a one-to-one transliteration interface. It is designed as an orthography, a proof of concept, and does some postprocessing according to language-specific rules. This allows us to get the same basic indic script output using different inputs. One may type 'e', 'é' or 'ai' to get the same output ए. or one may type 'ia' or 'ya' to get य . Capital or small letters make no difference to final output.</p>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >This allows us to add semantic cues to the write-up while preserving phonetic information. This makes writing Sanskrit, or other languages, more informative and intuitive than devanágarí. It helps us add grammatical information that helps disambiguate meaning more than devanágarí does, while still giving the ability to get devanagari output accurately. This provides a great teaching tool.
+    Use the US-International Keyboard (present on ALL operating systems by default. You have to just activate it). This keyboard allows us to type Western European languages, like German, French, Icelandic etc. in addition to English. Romanákßarí makes full use of this already present common keymap.
+    <ul><li><a href=http://www.youtube.com/watch?v=Uww3sF9yL5s> Click here for video on how to Install US International Keyboard on Windows</a></li>
+    <li><a href=http://www.youtube.com/watch?v=mtEa85S5ky8>Click here to learn how to use it on Windows.</li></ul></p>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >Some points to keep in mind :</p>
+    <ul>
+    <li>Acute accent or letter doubling can be used for writing long vowels</li>
+    <li>use ae and ao for <span style="font-size:20px;font-weight:bold">ऐ</span> and <span style="font-size:20px;font-weight:bold">औ</span> . ai and au map to <span style="font-size:20px;font-weight:bold">ए</span> and <span style="font-size:20px;font-weight:bold">ओ</span> . This is deliberately different from existing standards, as it is Grammatically consistent, while still maintaining phonetics. ái and áu should technically map same as ae and ao , but this doesn't currently work properly with sandhi postprocessing on.(trivial to fix though)</li>
+    <li> þ , ð , ñ , ð , ø are retroflexes : they are chosen because they look different. Note ñ is retroflex n, not palatal n.</li>
+    <li> Velar n is ng, palatal n is nÿ . The ÿ is not compulsary and generally deduced from it's environment.</li>
+    <li> Syllabic r and l are not separately marked. If surrounded by consonants, it is syllabic. </li>
+    <li> ' is a dummy consonant or glottal stop. : is a dummy vowel, or avagraha/alif vasla/elided vowel. Use these if r doesn't match your requirement and be syllabic.</li>
+    <li> x is the visarga. X generically stands for a debuccalized, lenited consonant, generally s or r, or in Arabic, t. </li></ul>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >Unlike Sanskrit, x may be used as a consonant, where it stands for ह . This ह however is unvoiced, not voiced like Sanskrit h. Useful for Persian words written in Sanskrit. E.g. If one wishes to write Ahura Mazda in Sanskrit, write it as Axura Mazda. The x is a lenited s, from Asura. This reflects both etymology and the fact that the word meaning has changed (Asura has negative meanings, Axura has positive). Similarly m and n may be used as consonants or vowels.</p>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >Romanakßarí allows more freedom in spelling. Devanágarí or Brahmi scripts in general have played a role in keeping the phonetic integrity of sanskrit intact. However their rigid phonetic model is both boon and bane. The bane is because it cannot adapt to other languages. It was designed for Prakrits, not even Sanskrit, which were then modified (rather shabbily, if one compares the care Sanskritists paid to other aspects of the language). Prakrits don't have many Samyuktakshars, and have a large percentage of 'a' as vowels, so the brahmi script is extremely well designed for them. For Sanskrit however, it shows flaws. 
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >Suppose one writes the word Indiá . Devanágarí can handle it either as <span style="font-size:20px;font-weight:bold">इन्दिआ</span> ,<span style="font-size:20px;font-weight:bold"> इन्द्या</span> or as <span style="font-size:20px;font-weight:bold">इन्दिया</span>. All three are wrong : they would be Indi'á , Indyá and Indiyá. The first has a glottal stop, the second is too short, the third is too long. Devanágarí model cannot accomodate this.</p>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >Devanágarí can handle only two levels of vowel-consonant heirarchy. This plays a role in people mislead or misunderstanding Sanskrit itself. The word <span style="font-size:20px;font-weight:bold">शत्र्वोः</span> is not <span style="font-size:20px;font-weight:bold">śatṛvoḥ</span> as a literal transliteration would give, but Shatruox in Romanakßarí. This makes the root Shatru  and it's endings -ox easy to understand. The status of r as ṛ or as consonant is dependent on context. In this case, it is NOT a syllabic, but writing it accurately is hampered by the rigid sound model of Devanágarí. There are a Lot of such examples. Writing the correct way makes things clearer, both phonetically and semantically (due to grammatical regularity). Since Devanágarí has a lot of legacy behind it, one must learn it for Sanskrit. But even in India, the literacy of devanágarí is questionable. The Roman script is understood by vast majority of the world population, and hence is the best vehicle for popularising this beautiful language. People have recognized this problem in the past, and attempted to rectify it. This is done in Marathi and Nepali for instance.
+    Daryá <span style="font-size:20px;font-weight:bold">दर्या </span>, Dariá <span style="font-size:20px;font-weight:bold">दर्‍या</span> , Barxáðx <span style="font-size:20px;font-weight:bold">बर्‍हाड़् </span> Ácárya <span style="font-size:20px;font-weight:bold">आचार्य </span>, Ácária <span style="font-size:20px;font-weight:bold">आचार्‍य</span> Garyo : <span style="font-size:20px;font-weight:bold">गर्यो</span> . Gario :<span style="font-size:20px;font-weight:bold"> गर्‍यो</span></p>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >These above are examples of eye-lash repha used in Marathi and Nepali. Your browser may or may not show them properly (firefox does, chrome doesn't on my system. Using non-standard Private Area letters <span style="font-size:20px;font-weight:bold"></span> from the Sanskrit 2003 or Siddhanta font, Marathi Ácária (the pickle maker) should look like this  : <span style="font-size:20px;font-weight:bold">आचाय </span>as opposed to Sanskrit Ácárya<span style="font-size:20px;font-weight:bold"> आचार्य</span> (the great teacher worth emulating).</p>
+    <p style="font-family:'Droid Sans',Siddhanta, 'Sanskrit 2003';" >The eyelash repha is used to denote that r is an onset (consonantal form), inspite of being followed by a consonant and preceeded by a vowel (which usually tells us r should be part of the nucleus of the consonant). The following consonant, usually a semivowel or aspirated vowel, forms part of the nucleus and isn't really a consonant. The syllables then split differently.<span style="font-size:20px;font-weight:bold">ह</span> or<span style="font-size:20px;font-weight:bold"> र्‍ह</span> means an aspirated r, where r is the beginning of the syllable. In most Sanskrit cases, r is actually a vowel, ar, ir, ur, ár etc. arising out of processes like guña. When it is not, this distinction is ignored. Pari + ávaraña = <span style="font-size:20px;font-weight:bold">पर्‍यावरण</span> , not <span style="font-size:20px;font-weight:bold">पर्यावरण</span>. However this distinction is ignored, and has been long enough for it to reflect within the meter of poetry composed after Sanskrit ceased to be a mothertongue of any living population.</p>
+    <p>Applications :</p>
+    <ul>
+    <li>Teaching.</li>
+    <li>Programming. Easier to break up words into POS tags. Context easier to understand in Sanskrit</li>
+    <li>Include words from languages like Arabic into Sanskrit write-up fairly accurately (as far as phonetics is concerned).</li>
+    <li>Design a new dialect/artificial language based on Sanskrit (as much conservative as possible).  
+    <ul><li>This dialect will be geared for modern usages, with the ability and rules to incorporate foreign words (place names etc.) from major languages (Old Persian, Latin, Greek, Arabic, Chinese etc. in that order. Older languages of the IE family are closer to Sanskrit than newer ones).</li>
+    <li>Incorporate modern day scientific nomenclature.</li>
+    <li>Use and encourage smaller words in Sanskrit, rather than the formal Classical forms (aste and sídati instead of upavißati, as an example. The latter is not wrong, but it is a mouthful, and should be used in formal situations. Commands like 'ae' (from á-eti come) instead of 'ágaccha' (á-gacchati come) for the same reasons. The more complex forms should be introduced later, and let the user decide which is better.</li>
+    <li>Disambiguation and fine distinctions should be kept in mind</li>
+    </ul></li></ul>
+    
+	<span style="font-size:small">
+	<blockquote>
+<form name="form1" id="form1" >
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="middle">
+	  <td colspan="2" scope="col" >
+		  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+	  <td colspan="2">
+  <table width="100%" cellpadding="2">
+  <tr>
+	  <td><div align="center"><h2>Romanákßarí Lipi</h2></div></td>
+	  <td><div align="center"><h2><div id="activescr">Transcript</div></h2></div></td>
+  </tr>
+  <tr align="center" valign="middle" border="0" cellpadding="4" cellspacing="0" >
+    <td width="50%"><textarea name="textarea3"   id="sourcebox" style="width: 100%; height: 500px; font-size: 26px; font-family:'Droid Sans',Siddhanta,'Sanskrit 2003',Arial Unicode MS, AnmolUni, Gautami,Bangla,'Akshar Unicode';" onchange="return transtext_rmdv(0)" onkeyup="return transtext_rmdv(0)" >This is the Romanákßarí or Latin Transcript box. Anything you type here will be transliterated to the Indic Script box. 
+    
+    </textarea></td>
+    <td width="50%"><textarea name="textarea2" id="targetbox" style="width: 100%; height: 500px; font-size: 26px; font-family:'Droid Sans',Siddhanta,'Sanskrit 2003',Arial Unicode MS, AnmolUni, Gautami,Bangla,'Akshar Unicode';" >This is the Indic script box (for देवनागरी , বাংলা, ಕನ್ನಡ, తెలుగు, ગુજરાતી, தமிழ், ਗੁਰਮੁਖੀ, മലയാളം, ଓଡ଼ିଆ , සිංහල or اُرْدُو ).
+    
+    </textarea></td>
+  </tr>
+ </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- Menu-->
+	    <div align="center"><div id="bluemenu" class="bluetabs">
+    <ul>
+      <li><a id="nindic" rel="nindic_menu" onMouseover="statusupdate(this.id);" href="javascript:void(0);">North Indic</a></li>
+      <li><a id="sindic" rel="sindic_menu" onMouseover="statusupdate(this.id);" href="javascript:void(0);">South Indic</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="seasian" rel="seasian_menu">South East Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="ceasian" rel="ceasian_menu">Central Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="middleeastern" rel="middleeastern_menu">West Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="african" rel="african_menu">African</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="alphab" rel="alphab_menu">European</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="easian" rel="easian_menu">East Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="american" rel="american_menu">American</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="artif" rel="artif_menu">Artificial</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="fantasy" rel="fantasy_menu">Fantasy</a></li>
+	  <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="translt" rel="translt_menu">Translit</a></li>
+    </ul>
+  </div>
+  <div id="nindic_menu" class="dropmenudiv_b"> 
+  
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="devanagari">Devanágarí(देवनागरी)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="eastnagari" title="Use Eastern Nagarí script (Bengali, Assamese, Bishnupriya Manipurí)" >Bánglá ( বাংলা )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="gujarati" title="Use script from Gujarát" >Gujarátí ( ગુજરાતી )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="guramukhi" title="Use script from Punjáb">Guramukhí ( ਗੁਰਮੁਖੀ )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="oriya" title="Use script from Orissa">Oð´iá ( ଓଡ଼ିଆ)</a></div>
+  <div id="sindic_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="kannada" title="Use Script from Karnáþaka">Kannaða ( ಕನ್ನಡ )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="telugu" title="Use Telugu script from Ándhrá">Telugu ( తెలుగు)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="tamil" title="Use Tamil Script">Tamiø´ ( தமிழ் )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass" id="malayalam" title="Use Malayálam script from Keralá" >Malayáøam´ ( മലയാളം)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="sinhala" title="Use Singhala script from Shrí Langká" >Singhala ( සිංහල )</a> </div>
+  <div id="seasian_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="burmese" title="Use Script from Myanmar" >Myánmá Básá ( မြန်မာဘာသာ  )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="cambodian" title="Use script from Cambodia" >Cambodian Khmer ( ភាសាខ្មែរ) )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="thai" title="Use Script from Thailand" >Bhásá Thai ( ภาษาไทย )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="buhid" title="Use Buhid Script from Phillipines">Buhid ( )*</a> </div>
+  <div id="ceasian_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="tibetan" title="Use Script from Tibet">Tibetan ( དབུ་ཅན )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="phagspa" title="Use Phagspa Tibeto-Mongol Script" >Phagspa (  )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="mongol" title="Use Mongolian" >Mongol ( ) )*</a> </div>
+  <div id="middleeastern_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="persoarabic" title="Experimental Perso-Arabic support" >Perso-Arabic (أبجدية_عربية)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="hebrew" title="Experimental Hebrew support" >Hebrew (אָלֶף-בֵּית עִבְרִי)*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="syriac" title="Use Syriac Language" >Syriac ( ܣܘܪܝܝܐ )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="mandaic" title="Use Mandaic Script" >Mandaic ( TBD )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="avestan" title="Use Avestán Language" >Avestán ( TBD )*</a> </div>
+  <div id="african_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="geez" title="Use Gi\'iz Script" >Gi\'iz ( ግዕዝ )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="tifinagh" title="Use  Tifinagh Script" >Tifinagh ( )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="nko" title="Use Nko Script" >Nko ( )*</a> </div>
+  <div id="alphab_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="latin" title="Use Latin Script" >Latin (Látîn)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="cyrillic" title="Use Cyrillic script" >Cyrillic ( русский )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="greek" title="Use Greek script" >Greek ( ελληνικά )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="armenian" title="Use Armenian script">Armenian ( այբուբեն )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="georgian" title="Use Georgian script" >Georgian ( ქართული  )*</a> </div>
+  <div id="easian_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="hangeul" title="Use Hangeul featural script from Korea" >Hangeul ( 한글 )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="bopomofo" title="Use Bopomofo script from China" >Bopomofo ( ㄅㄆㄇㄈ )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="hiragana" title="Use Hiragana Syllabary from Japan" >Hirágáná  ( ひらがな  )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="katakana" title="Use Kátákáná Syllabary from Japan" >Kátákáná  ( カタカナ )*</a> </div>
+  <div id="american_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="cree" title="Cree Syllabics" >Cree ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="blackfoot" title="Use Blackfoot Syllabary" >Blackfoot ( )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="inuktitut" title="Use Inuktitut Syllabics from Canada" >Inuktitut ( )*</a> </div>
+  <div id="artif_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="ipa" title="International Phonetic Alphabet">IPA (aɪ pͪiː eɪ)*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="braille" title="Braille dots">Braille ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="vspeech" title="Visible Speech script">Visible Speech ()*</a> </div>
+  <div id="fantasy_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="tengwar" title="Elvish script from Lord of the Rings.">Tèngwár (<span style="font-family:Tengwar Annatar";>1Vbç¨C¼</span>)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="cirith" title="Dwarvish script from Lord of the Rings.">Cirith ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="shawian" title="Sir George Bernard Shaw\'s vision of perfect English"> Shawian ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="klingon" title="Klingon script from Star wars">Klingon ()*</a> 
+	</div>
+	<div id="translt_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="iast" title="International Alphabet for Sanskrit Transliteration">IAST </a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="itrans" title="I-TRANS">ITRANS</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="xsampa" title="ASCII scheme for phonetic transcription">X-Sampa</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="om" title="Another attempt at transliteration">Om</a> 
+<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="romenagari" title="ASCII Case-insensitive scheme for compiler backends">Romenagari</a> 
+
+	</div></div>
+	<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("bluemenu");
+</script>
+<!--/Menu--></td>
+  </tr>
+  <tr><td colspan="2"><div align="center"><strong>Script Options</strong></div></td>
+  </tr>
+  <tr >
+    <td colspan="2"><div id="options">
+	<table width="100%" border="0">
+	  <tr>
+	<td><p align="center"><strong>Target Language:</strong>
+	  </p>
+	  <p>
+	  <input name="lang" id="generic" title="Choose generic conventions" onclick="return transtext_rmdv(0)" value="generic" type="radio" checked="checked"/>
+	    Generic : Used with languages like Dravidian. No postprocessing.<br/>
+	    <input name="lang" id="sanskrta" title="Choose Sanskrta conventions - which handles candrabindus differently and requires a Viráma at the end of words, unless they end witha schwa (a) " onclick="return transtext_rmdv(0)" value="sanskrta" type="radio" />
+	     Old Indic : Sanskrta, Pali, Prakrits. Sandhi postprocessing <br/>
+	    <input name="lang" class="style24" id="hindi" onclick="return transtext_rmdv(0)" title="Use New Indic conventions - like anunásiká nasal vowels, candrabindus and implied Viráma at end of words" value="hindi" type="radio" />
+	    Modern North Indian : Hindi, Marathi, Nepali, Bangla ... . Scibal conventions. Inherits Old Indic.</p></td>
+  
+      <td><div align="center"><strong>Features and Ligatures </strong>
+      </div>
+        <p>Anusvára mode.:
+          <input name="anu" class="style24" id="anu" title="Anusvára mode - turns half-nasals into anusváras as appropriate. Useful for new Indic Languages. Turn off for Sanskrta" onclick="return transtext_rmdv(0)" value="checkbox" type="checkbox" />
+        </p></td>
+   
+      <td><p align="center"><strong>Styles</strong></p>
+        <p><span id="tengwar_opts" style="visibility:hidden;"><input name="style" id="style_mordor" title="Make the script look like the One Ring" onclick="return transtext_rmdv(0)" value="mordor" type="checkbox" />
+	    Mordor<br/></span></p>
+	    <p><span id="grantha_opts" style="visibility:hidden;"><input name="style" id="style_grantha" title="Use Grantha mode. Overlays Bangla script, and uses a bit of Tamil" onclick="return transtext_rmdv(0)" value="grantha" type="checkbox" />
+	    Grantha<br/></span></p></td>
+	</tr></table>	</div></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<table width="100%" border="0">
+      <tr>
+        <td width="20" nowrap="nowrap">Examples :</td>
+       
+        <td colspan="3"> <!--<input name="button" type="button" title="Loads a text showcasing all the features of this script. No script supports all features" onclick="return generictext()" value="[ generic ]" />
+        <input name="button" type="button" title="Loads a Sanskrta Example text on the top box, with full capitalization"  onclick="return sanskrtatext()" value="[ sanskrta ]"/>
+        <input name="button" type="button" title="Loads a typical Hindí News article with added capitalization in top box"  onclick="return hinditext()" value="[ hindi ]" />       
+		-->
+		<div  class="bluetabs">
+    <ul>
+      <li><a id="generic_ex" onClick="return generictext()" title="Loads a text showcasing all the features of this script. No script supports all features" href="javascript:void(0);">Generic</a></li>
+	  <li><a id="sanskrta_ex" onClick="return sanskrtatext()" title="Loads a Sanskrta Example text on the top box, with full capitalization" href="javascript:void(0);">Sanskrta</a></li>
+	  <li><a id="hindi_ex" onClick="return hinditext()" title="Loads a typical Hindí News article with added capitalization in top box" href="javascript:void(0);">Hindí</a></li>
+      </ul>
+  </div>
+		
+		
+		 </td>
+        <td width="20"><!--<span class="back_button">
+          <input name="Clear" type="button" title="Clear the boxes" onclick="return clear_input()" value="[&lt; clear  &gt;]"/>
+        </span>--><div  class="bluetabs">
+    <ul>
+      <li><a id="clear" onClick="return clear_input()" href="javascript:void(0);">Clear</a></li>
+      </ul>
+  </div></td>      </tr>
+    </table></td>
+  </tr>
+  <tr>  
+    <td height="100" colspan="2" valign="top" style="font-size:small;" cellpadding="2"><table width="100%" cellpadding="2"><tr><td><em>
+      <div id="status" ></div></em></td>
+  </tr></td>
+  </tr></table></td></tr></table>
+</table>
+
+
+<div id="debug"></div>
+<input type="hidden" id="currentscript" value="devanagari">
+<input type="hidden" id="scriptcon" value="">
+<input type="hidden" id="langmode" value="generic">
+<input type="hidden" id="stylemode" value="">
+</form>
+</blockquote>
+</span></body>
+</html>

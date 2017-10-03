@@ -1,0 +1,76 @@
+
+/*** The menu bar ***/
+html ul.gotobar {
+    /* Whole bar. */
+    background: #c17d11;
+    border-top: 1px solid #7a4c01;
+    border-bottom: 1px solid #000;
+}
+html ul.gotobar li {
+    /* Outer edge of menu items. */
+    border: 1px solid #7a4c01;
+}
+html ul.gotobar li a {
+    /* Inactive menu items. */
+    border: 1px solid #e6af59;
+    background: #cc8515;
+    color: #024;
+}
+html ul.gotobar li.current a {
+    /* Selected menu items. */
+    background: #a86907;
+    border: 1px solid #c17d11;
+    color: #000;
+}
+html ul.gotobar li.current {
+    /* Outer border of selected menu items. */
+    border: 1px solid #583701;
+}
+html ul.gotobar li a:hover {
+    /* Menu items on hover. */
+    color: #000;
+    background: #e39b2a;
+    border: 1px solid #e9b96e;
+}
+
+/*** The sidebar ***/
+html div.sidebar {
+    background: #e9b96e;
+    border: 1px solid #c17d11;
+    border-bottom: 1px solid #8f5902;
+}
+html div.wrapper div.sidebar h1, 
+html div.wrapper div.sidebar h2, 
+html div.wrapper div.sidebar h3 { 
+    color: #583701;
+    border: 1px solid #8f5902;
+    background: #c17d11;
+}
+html div.sidebar li {
+    background: url(img/bullet-chocolate.png) no-repeat 3px 3px;
+}
+
+/*** The content ***/
+html h2, html h3, html h4, html h5 {
+    /* Headings */
+    color: #c17d11;
+}
+html div.wrapper h1 {
+    /* Largest heading */
+    color: #e9b96e;
+}
+html div.wrapper h4 { 
+    /* Smallest heading */
+    color: #8f5902; 
+}
+
+/*** The links ***/
+html a { 
+    color: #c17d11;
+}
+html a:visited {
+    color: #8f5902; 
+}
+html a.logo {
+    color: #444;
+}

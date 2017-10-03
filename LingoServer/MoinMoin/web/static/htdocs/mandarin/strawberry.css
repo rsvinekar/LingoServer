@@ -1,0 +1,76 @@
+
+/*** The menu bar ***/
+html ul.gotobar {
+    /* Whole bar. */
+    background: #39f;
+    border-top: 1px solid #06d;
+    border-bottom: 1px solid #07e;
+}
+html ul.gotobar li {
+    /* Outer edge of menu items. */
+    border: 1px solid #07e;
+}
+html ul.gotobar li a {
+    /* Inactive menu items. */
+    border: 1px solid #7bf;
+    background: #4af;
+    color: #024;
+}
+html ul.gotobar li.current a {
+    /* Selected menu items. */
+    background: #39f;
+    border: 1px solid #3af;
+    color: #000;
+}
+html ul.gotobar li.current {
+    /* Outer border of selected menu items. */
+    border: 1px solid #06d;
+}
+html ul.gotobar li a:hover {
+    /* Menu items on hover. */
+    color: #000;
+    background: #6bf;
+    border: 1px solid #9df;
+}
+
+/*** The sidebar ***/
+html div.sidebar {
+    background: #bef;
+    border: 1px solid #7ae;
+    border-bottom: 1px solid #38e;
+}
+html div.wrapper div.sidebar h1, 
+html div.wrapper div.sidebar h2, 
+html div.wrapper div.sidebar h3 { 
+    color: #258;
+    border: 1px solid #6ae;
+    background: #7cf;
+}
+html div.sidebar li {
+    background: url(img/bullet-blue.png) no-repeat 3px 3px;
+}
+
+/*** The content ***/
+html h2, html h3, html h4, html h5 {
+    /* Headings */
+    color: #4af;
+}
+html div.wrapper h1 {
+    /* Largest heading */
+    color: #29f;
+}
+html div.wrapper h4 { 
+    /* Smallest heading */
+    color: #6bf; 
+}
+
+/*** The links ***/
+html a { 
+    color: #06f;
+}
+html a:visited {
+    color: #39f; 
+}
+html a.logo {
+    color: #444;
+}

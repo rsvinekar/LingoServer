@@ -1,0 +1,76 @@
+
+/*** The menu bar ***/
+html ul.gotobar {
+    /* Whole bar. */
+    background: #ad7fa8;
+    border-top: 1px solid #75507b;
+    border-bottom: 1px solid #000;
+}
+html ul.gotobar li {
+    /* Outer edge of menu items. */
+    border: 1px solid #75507b;
+}
+html ul.gotobar li a {
+    /* Inactive menu items. */
+    border: 1px solid #e0b9dc;
+    background: #b893b4;
+    color: #5c3566;
+}
+html ul.gotobar li.current a {
+    /* Selected menu items. */
+    background: #8b5f92;
+    border: 1px solid #ad7fa8;
+    color: #000;
+}
+html ul.gotobar li.current {
+    /* Outer border of selected menu items. */
+    border: 1px solid #5c3566;
+}
+html ul.gotobar li a:hover {
+    /* Menu items on hover. */
+    color: #000;
+    background: #e0b9dc;
+    border: 1px solid #fff;
+}
+
+/*** The sidebar ***/
+html div.sidebar {
+    background: #e0b9dc;
+    border: 1px solid #ad7fa8;
+    border-bottom: 1px solid #75507b;
+}
+html div.wrapper div.sidebar h1, 
+html div.wrapper div.sidebar h2, 
+html div.wrapper div.sidebar h3 { 
+    color: #5c3566;
+    border: 1px solid #75507b;
+    background: #ad7fa8;
+}
+html div.sidebar li {
+    background: url(img/bullet-plum.png) no-repeat 3px 3px;
+}
+
+/*** The content ***/
+html h2, html h3, html h4, html h5 {
+    /* Headings */
+    color: #75507b;
+}
+html div.wrapper h1 {
+    /* Largest heading */
+    color: #ad7fa8;
+}
+html div.wrapper h4 { 
+    /* Smallest heading */
+    color: #5c3566;
+}
+
+/*** The links ***/
+html a { 
+    color: #bb5bb0;
+}
+html a:visited {
+    color: #7e4388;
+}
+html a.logo {
+    color: #444;
+}

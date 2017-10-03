@@ -1,0 +1,4 @@
+Hello. This is an experimental wiki. [[http://localhost:8080/moin_static198/Transliterator_orig/old_translit2.html|The Olde Translit|target="_blank"]], works!! but not really. [[http://localhost:8080/moin_static198/Transliterator/Transliterator_new.html|The Neu Translit|target="_blank"]] just the shell. Not working, really. Embedded
+
+ * OldInterface
+ * NewInterface

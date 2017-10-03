@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="page_37">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="keywords" content="Romanakßarí, Romananakshari, transliterate, orthography, sanskrit, unicode, interface" />
+<meta name="author" content="Rithvik Vinekar" />
+<meta name="description" content="Demonstration Transliterator for Romanakßarí" />
+<meta name="robots" content="index, follow, noodp" />
+<meta name="revisit-after" content="15 days" />
+<title>Transliteration New Interface - Rtvik Viñekarax</title>
+<!--Remove these if embedding in tiki or other place where jquery-ui is already present-
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+
+<link rel="stylesheet" href="../personal/lib/jquery/jquery-ui/themes/smoothness/jquery-ui.css" type="text/css" />
+<!-Can also include Google CDN links-->
+<script src="/jquery-ui/js/jquery.min.js"></script>
+<script src="/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="/jquery-ui/js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/jquery-ui/css/cupertino/jquery-ui-1.10.4.custom.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+<style>
+.toolbar{
+color:#ccc;
+}
+
+</style>
+<script type="text/javascript" src="js/translit_interface.js"></script>
+
+
+<script language="text/javascript" src="old/transcodes1.js" type="text/javascript"></script>
+<script language="text/javascript" src="old/translit.js" type="text/javascript"></script>
+<script language="text/javascript" src="old/examples.js" type="text/javascript"></script>
+<script language="text/javascript" src="old/interface.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/translit_interface.css"/>
+
+</head>
+<body onload="statusupdate('reset');">
+<div id="navwrapper"> 
+	<!-- Menu -->	
+<ul id="nav" class="floatleft">
+      <li><a id="nindic" class="dmenu" rel="nindic_menu" onMouseover="statusupdate(this.id);" href="javascript:void(0);">North Indic&nbsp;<span class="arrowdown">▼</span></a>
+	<ul>
+		<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="Devanagari">Devanágarí(देवनागरी)</a></li> 
+		<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="Bangla" title="Use Eastern Nagarí script (Bengali, Assamese, Bishnupriya Manipurí)" >Bánglá ( বাংলা )</a></li> 
+		<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="Gujarati" title="Use script from Gujarát" >Gujarátí ( ગુજરાતી )</a></li> 
+		<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="Gurumukhi" title="Use script from Punjáb">Guramukhí ( ਗੁਰਮੁਖੀ )</a></li> 
+		<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="Oriya" title="Use script from Orissa">Oð´iá ( ଓଡ଼ିଆ)</a></li>
+	</ul>
+     </li>      
+      <li><a id="sindic" class="dmenu" rel="sindic_menu" onMouseover="statusupdate(this.id);" href="javascript:void(0);">South Indic&nbsp;<span class="arrowdown">▼</span></a>
+      <ul>
+	<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="Kannada" title="Use Script from Karnáþaka">Kannaða ( ಕನ್ನಡ )</a></li> 
+	<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="Telugu" title="Use Telugu script from Ándhrá">Telugu ( తెలుగు)</a></li> 
+	<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="Tamil" title="Use Tamil Script">Tamiø´ ( தமிழ் )</a></li> 
+	<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass" id="Malayalam" title="Use Malayálam script from Keralá" >Malayáøam´ ( മലയാളം)</a></li> 
+	<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="Sinhala" title="Use Singhala script from Shrí Langká" >Singhala ( සිංහල )</a></li>
+      </ul>
+      </li>
+      <li><a class="dmenu" onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="middleeastern" rel="middleeastern_menu">West Asian&nbsp;<span class="arrowdown">▼</span></a>
+      <ul>
+	<li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="persoarabic" title="Experimental Perso-Arabic support" >Perso-Arabic (أبجدية_عربية)</a> </li>
+      </ul>
+      </li>
+      <li><a class="dmenu" onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="fantasy" rel="fantasy_menu">Fantasy&nbsp;<span class="arrowdown">▼</span></a>
+      <ul><li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="Tengwar" title="Elvish script from Lord of the Rings.">Tèngwár (<span style="font-family:'Tengwar Annatar';">1Vbç¨C¼</span>)</a></li></ul>      
+      </li>
+      <li><a class="dmenu" onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="translt" rel="translt_menu">Translit&nbsp;<span class="arrowdown">▼</span></a>
+      <ul>
+      <li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="IAST" title="International Alphabet for Sanskrit Transliteration">IAST </a></li>
+      <li><a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="IPA" title="International Phonetic Alphabet">IPA (aɪ pͪiː eɪ)*</a></li>
+      </ul>
+      </li>
+    </ul>
+    </ul><ul id="nav" class="floatright" style="position:relative; right:30px;">
+        
+        <li><a class="dmenu" href="#" title="These languages are not implemented on Unicode. They use special fonts that overlay normal Roman letters."><span class="arrowdown">▼</span>&nbsp;Non-Unicode</a>  
+                <ul>  
+                    <li><a href="#" title="For LoTR fans. This is the non-Unicode version. Recommended, for beautiful fonts :-)">Tengwar</a></li>
+                    <li><a href="#" title="For LoTR fans. This is the non-Unicode version. Recommended, for beautiful fonts :-)">Sindarin</a></li>
+                    <li class="menuseprator"></li>  
+                    <li><a href="#" title="An artificial featural script">Visible Speech</a></li>
+                    <li><a href="#" title="George Bernard Shaw's idea for English">Shawian</a></li>
+                    <li class="menuseprator"></li>  
+                    <li><a href="#" title="Non-Unicode implementation. Will be deprecated, but has some beautiful fonts">Avestan</a></li>
+                    <li><a href="#" title="Non-Unicode implementation. Will be deprecated, but has some beautiful fonts">Brahmi</a></li>
+                    <li><a href="#" title="Non-Unicode implementation. Will be deprecated, but has some beautiful fonts">Kharoshti</a></li>
+                </ul>  
+            </li>
+            <li><a class="dmenu" href="#" title="Existing standard ways to write things in the Roman script"><span class="arrowdown">▼</span>&nbsp;Roman Transcription</a>  
+                <ul> 
+	    <li><a href="#" title="International Phonetic Alphabet">IPA</a></li>
+	    <li><a href="#" title="Americanist Phonetic Alphabet">Americanist</a></li>
+	    <li><a href="#" title="X-Sampa">X-SAMPA</a></li>
+	    <li class="menuseprator"></li>
+                    <li><a href="#" title="International Alphabet for Sanskrit Transliteration">IAST</a></li>  
+                    <li><a href="#" title="IAST extended and modified for Indian languages. ISO standard">ISO15919</a></li>  
+                    <li class="menuseprator"></li>  
+                    <li><a href="#" title="Common Indian standard for ASCII-based transliteration of Indic scripts. Deprecated, but still used">ITRANS</a></li>  
+                    <li><a href="#" title="Common International academic standard for ASCII-based transliteration of Indic scripts Deprecated, but still used">HARVARD-KYOTO</a></li>  
+                </ul>  
+            </li>
+            <li><a class="dmenu" href="mailto:rsvinekar@gmail.com" title="Design, implementation, brainstorm and everything by me. Fonts, not mine, theme: jquery, inspired by Google">©&nbsp;Rithvik S. Vinekar</a>
+            <ul><li><a href="#">Design, implementation, brainstorm and everything by me.</a></li>
+                <li><a href="#">No fonts are designed by me. I am using the good work of others.</a></li>
+                <li><a href="#">Please respect their license requirements</a></li>
+                <li><a href="#">Website look and feel : Jquery, with Google as inspiration</a></li>
+                <li><a href="#">I am NOT a professional linguist. This is my Hobby. </a></li>
+                <li><a href="#">If something is wrong, please kindly explain your case.</a></li>
+                <li><a href="#">This work does not guarantee accuracy of any kind</a></li>
+                <li><a href="#">I did it for FUN!!!</a></li>
+                </ul>
+            </li>
+        </ul>
+    <br class="clear">
+  </div>
+<div id="source_tabs" class="tabs"> <!-- top tabs -->
+		<ul>
+			<li><a href="#source_tabs-1">Examples</a></li>
+			<li><a href="#source_tabs-2">Help</a></li>
+			<li><a href="#source_tabs-3">Fonts Info.</a></li>
+			<li><a href="#source_tabs-4">Status</a></li>		
+		</ul>
+		<div id="source_tabs-1">
+			Load these examples to play with.<div  class="bluetabs">
+		    <ul>
+					        <li><a id="generic_ex" onClick="return generictext()" title="Loads a text showcasing all the features of this script. No script supports all features" href="javascript:void(0);">Generic</a> Use Generic Mode.</li>
+	  	  <li><a id="sanskrta_ex" onClick="return sanskrtatext()" title="Loads a Sanskrta Example text on the top box, with full capitalization" href="javascript:void(0);">Sanskrta</a> Use Sanskrta Mode, with Anusvara mode turned OFF</li>
+	  	  <li><a id="hindi_ex" onClick="return hinditext()" title="Loads a typical Hindí News article with added capitalization in top box" href="javascript:void(0);">Hindí</a> Use Modern Indic Mode with Indian scripts, with Anusvara mode turned ON</li>
+	      <li><a id="clear" onClick="return clear_input()" href="javascript:void(0);">Clear</a></li>
+	      </ul>
+	  </div>
+
+		</div>
+		<div id="source_tabs-2">:-P
+         </div>
+		<div id="source_tabs-3"><p>Choosing the right fonts, and installing <b>Support for Complex Scripts is important</b>. This will depend on your operating system. Scripts like Devanágarí, Arabic etc. consist of shapes which change considerably in accordance with their surroundings. These ligatures are compulsary in these scripts, unlike the alphabetic scripts where ligatures are used for Aesthetic reasons. Directions also vary, even within the same script. Arabic writes right-to-left, but numbers are written left-to-right.</p>
+		<p>One can then install a Pan-Unicode font which support a large number of scripts. Their support for each script varies, and they may not be the best for a particular script, but get their job done. Some fonts like this are Code2000, Gentium, Arial Unicode MS (Microsoft Office). Most operating systems nowadays give good support for most common languages. Specialist fonts pay more attention to details though, and are more accurate, better to look at, and target a specific look and feel, or language.
+		
+  </div>
+		
+		
+		<div id="source_tabs-4"><div id="status" ></div>
+		</div>
+		
+	
+	</div>	
+  
+
+<div class="demo-frame ui-widget-header" id="source-frame"> <!-- left Frame -->
+<div id="source-toolbar" class="toolbar ui-widget-header">
+	<a class="fa fa-font">&nbsp;Fonts:&nbsp;</a><input type="text" id="source_font" size="30" value="Sanskrit 2003, Siddhanta" title="Choose the fonts for the box. Multiple fonts may be chosen"/>
+	</span><span style="padding:6px 2px;background:#f2f2f2;">
+	<a class="fa fa-expand">&nbsp;Size&nbsp;</a><input type="text" size="2" id="source_fontsize" value="22" title="Change size in px. Use mousewheel on me :-)"/></span><button id="source_fontlock" class="lock_settings">Lock OFF</button><span style="padding:6px 0px;background:#f2f2f2;">
+	<a class="fa fa-text-height">&nbsp;Height&nbsp;</a><input type="text" size="3" id="source_lineheight" value="22" title="Change line height in px. Click the lock to change the same in the other box"/></span><button id="source_lock" class="lock_settings">Lock OFF</button>
+	 &nbsp; &nbsp; 
+			<span id="source_fontstyles">
+				<input type="checkbox" id="source_make_bold" class="make_bold"/><label for="source_make_bold" title="Bold">Bold</label>
+				<input type="checkbox" id="source_make_italic" class="make_italic"/><label for="source_make_italic" title="Italic">Italic</label>
+			</span>
+			<span id="source_fontalign">
+				<input type="radio" id="source_align_left" class="align_left" name="source_align" checked="checked" /><label for="source_align_left" title="Left Align">1</label>
+				<input type="radio" id="source_align_center" class="align_center" name="source_align"/><label for="source_align_center" title="Center Align">1</label>
+				<input type="radio" id="source_align_right" class="align_right" name="source_align"/><label for="source_align_right" title="Right Align">1</label>
+				
+			</span>
+			<span id="source_bidi_opts">
+			
+			<input type="radio" id="source_bidi_auto" class="bidi_auto" name="source_bidi" checked="checked"/><label title="BIDI direction AUTO default"  for="source_bidi_auto">1</label>
+			<input type="radio" id="source_bidi_ltr" class="bidi_ltr" name="source_bidi"/><label for="source_bidi_ltr" title="BIDI direction Left to Right">1</label>
+			<input type="radio" id="source_bidi_rtl" class="bidi_rtl" name="source_bidi" /><label for="source_bidi_rtl" title="BIDI direction Right to Left">1</label>
+			<input type="checkbox" id="source_bidi_override" class="bidi_override" /><label for="source_bidi_override" title="BIDI Override (Force)">1</label>
+			</span>
+						
+
+			
+			
+			</div>
+		<textarea id="source_textarea" class="textbox" ></textarea>
+		<div id="source-toolbar-bottom" class="toolbar ui-widget-header ui-corner-all"><span style="line-height:22px;"> Status : </span>
+			<label for="source_translit_indicator">Transliteration status: </label>
+				<a id="source_translit_indicator" class="fa fa-refresh fa-spin"></a>
+			<label for="source_script">Source script: </label>
+				<span id="source_script"  class="status_bar" title="Script Name">Roman</span> &nbsp; &nbsp; 
+			<label for="source_dialect">Source : </label>
+				<span id="source_dialect"  class="status_bar" title="Dialect/Orthography name">Romanakßarí</span> &nbsp;  &nbsp; 
+			<div style="float:right;">
+				<label for="Advanced CSS">Advanced CSS</label>
+				<input type="text" id="source_adv_style" size="30" value="" title="CSS style commands may be directly typed here"/>
+			</div>
+		</div>
+		
+		
+
+<div id="source_accordion" class="accordian">
+  <h3>Script</h3>
+  <div>
+    <p>
+		Choose a script for the target. A script is SIMPLY a set of shapes. The default source script is Devanagari. Many languages, including Hindi, Sanskrit etc., use the Devanagari script, but do so differently.
+    </p>
+
+  </div>
+  <h3>Orthography</h3>
+  <div>
+    <p>
+        Choose a script orthography, which maps the script shapes to meaningful information. Phonetic association and spellings, as well as script modifications and extensions (accents etc.). Default source orthography is Romanakßarii
+    </p>
+  </div>
+  <h3>Processing</h3>
+  <div>
+    <p>
+        Choose the language or dialect. The pre-processor works on the script before it is transliterated into the target script. It concerns sandhis, context-based changes which are easier done on the Romanakßarii or alphabetical script.
+		Post-processing works after transliteration. It involves scribal conventions and other changes which are easier applied after transliteration.
+		
+	
+    </p>
+  </div>
+</div>
+</div>
+<div class="demo-frame ui-widget-header" id="target-frame"> <!-- right Frame -->
+<div id="target-toolbar" class="toolbar ui-widget-header">
+	<a class="fa fa-font">&nbsp;Fonts:&nbsp;</a><input type="text" id="target_font" size="30" value="Sanskrit 2003, Siddhanta" title="Choose the fonts for the box. Multiple fonts may be chosen"/>
+	</span><span style="padding:6px 2px;background:#f2f2f2;">
+	<a class="fa fa-expand">&nbsp;Size&nbsp;</a><input type="text" size="2" id="target_fontsize" value="22" title="Change size in px. Use mousewheel on me :-)"/></span><button id="target_fontlock" class="lock_settings">Lock OFF</button><span style="padding:6px 0px;background:#f2f2f2;">
+	<a class="fa fa-text-height">&nbsp;Height&nbsp;</a><input type="text" size="3" id="target_lineheight" value="22" title="Change line height in px. Click the lock to change the same in the other box"/></span><button id="target_lock" class="lock_settings">Lock OFF</button>
+	 &nbsp; &nbsp; 
+			<span id="target_fontstyles">
+				<input type="checkbox" id="target_make_bold" class="make_bold"/><label for="target_make_bold" title="Bold">Bold</label>
+				<input type="checkbox" id="target_make_italic" class="make_italic"/><label for="target_make_italic" title="Italic">Italic</label>
+			</span>
+			<span id="target_fontalign">
+				<input type="radio" id="target_align_left" class="align_left" name="target_align" checked="checked" /><label for="target_align_left" title="Left Align">1</label>
+				<input type="radio" id="target_align_center" class="align_center" name="target_align"/><label for="target_align_center" title="Center Align">1</label>
+				<input type="radio" id="target_align_right" class="align_right" name="target_align"/><label for="target_align_right" title="Right Align">1</label>
+				
+			</span>
+			<span id="target_bidi_opts">
+			
+			<input type="radio" id="target_bidi_auto" class="bidi_auto" name="target_bidi" checked="checked"/><label title="BIDI direction AUTO default"  for="target_bidi_auto">1</label>
+			<input type="radio" id="target_bidi_ltr" class="bidi_ltr" name="target_bidi"/><label for="target_bidi_ltr" title="BIDI direction Left to Right">1</label>
+			<input type="radio" id="target_bidi_rtl" class="bidi_rtl" name="target_bidi" /><label for="target_bidi_rtl" title="BIDI direction Right to Left">1</label>
+			<input type="checkbox" id="target_bidi_override" class="bidi_override" /><label for="target_bidi_override" title="BIDI Override (Force)">1</label>
+			</span>
+						
+
+			
+			
+			</div>
+		<textarea id="target_textarea" class="textbox" ></textarea>
+		<div id="target-toolbar-bottom" class="toolbar ui-widget-header ui-corner-all"><span style="line-height:22px;"> Status : </span>
+			<label for="target_translit_indicator">Transliteration status: </label>
+				<a id="target_translit_indicator" class="fa fa-refresh fa-spin"></a>
+			<label for="target_script">Target script: </label>
+				<span id="target_script"  class="status_bar" title="Script Name">Devanágarí(देवनागरी) </span> &nbsp; &nbsp; 
+			<label for="target_dialect">Target dialect: </label>
+				<span id="target_dialect"  class="status_bar" title="Dialect/Orthography name">sanskrta</span> &nbsp;  &nbsp; 
+			<div style="float:right;">
+				<label for="Advanced CSS">Advanced CSS</label>
+				<input type="text" id="target_adv_style" size="30" value="" title="CSS style commands may be directly typed here"/>
+			</div>
+		</div>
+	
+		
+
+
+
+		<div class="clear"></div>
+		<div id="target_accordion" class="accordian">
+		  <h3>Script</h3>
+		  <div>
+		    <p>
+				Choose a script for the target. A script is SIMPLY a set of shapes. The default source script is Devanagari. Many languages, including Hindi, Sanskrit etc., use the Devanagari script, but do so differently.
+		    </p>
+    
+		  </div>
+		  <h3>Orthography</h3>
+		  <div>
+		    <p>
+		        Choose a script orthography, which maps the script shapes to meaningful information. Phonetic association and spellings, as well as script modifications and extensions (accents etc.). Default source orthography is Romanakßarii
+		        <input type="hidden" id="currentscript" value="devanagari">
+<input type="hidden" id="scriptcon" value="">
+<input type="hidden" id="langmode" value="generic">
+<input type="hidden" id="stylemode" value="">
+		    </p>
+		  </div>
+		  <h3>Processing</h3>
+		  <div>
+		    <p>
+		        Choose the language or dialect. The pre-processor works on the script before it is transliterated into the target script. It concerns sandhis, context-based changes which are easier done on the Romanakßarii or alphabetical script.
+				Post-processing works after transliteration. It involves scribal conventions and other changes which are easier applied after transliteration.	</p>			
+			    <input name="lang" id="generic" title="Choose generic conventions" onclick="return transtext_rmdv(0)" value="generic" type="radio"/>Generic : Used with languages like Dravidian. No postprocessing.<br/>
+			    <input name="lang" id="sanskrta" title="Choose Sanskrta conventions - which handles candrabindus differently and requires a Viráma at the end of words, unless they end witha schwa (a) " onclick="return transtext_rmdv(0)" value="sanskrta" type="radio"  checked="checked"/> Old Indic : Sanskrta, Pali, Prakrits. Sandhi postprocessing <br/>
+			    <input name="lang" class="style24" id="hindi" onclick="return transtext_rmdv(0)" title="Use New Indic conventions - like anunásiká nasal vowels, candrabindus and implied Viráma at end of words" value="hindi" type="radio" />Modern North Indian : Hindi, Marathi, Nepali, Bangla ... . Scibal conventions. Inherits Old Indic. 
+			<input name="anu" class="style24" id="anu" title="Anusvára mode - turns half-nasals into anusváras as appropriate. Useful for new Indic Languages. Turn off for Sanskrta" onclick="return transtext_rmdv(0)" value="checkbox" type="checkbox" />Anusvara Mode 
+		    
+		</div>
+<object id="fontListSWF" name="fontListSWF" type="application/x-shockwave-flash" data="FontList.swf" width="1" height="1" style="visibility:hidden;">
+    <param name="movie" value="FontList.swf"> <param name="AllowScriptAccess" value="always">	<embed src="FontList.swf" width="1" height="1" AllowScriptAccess="always"></embed>
+</object>
+
+</body>
+</html>

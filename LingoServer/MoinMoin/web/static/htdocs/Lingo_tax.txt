@@ -1,0 +1,90 @@
+Indic
+Indic > Devanagari
+Indic > Devanagari > Generic
+Indic > Devanagari > Sanskrtam
+Indic > Devanagari > Hindi
+Indic > Devanagari > Marathi
+Indic > Devanagari > Konkani
+Indic > Devanagari > Hindi
+Indic > Bangla
+Indic > Bangla > Generic
+Indic > Bangla > Sanskrtam
+Indic > Bangla > Bangla
+Indic > Bangla > Bangladeshi
+Indic > Bangla > Assamese
+Indic > Bangla > Bishnupriya
+Indic > Bangla > Grantha
+Indic > Oriya
+Indic > Oriya > Generic
+Indic > Oriya > Sanskrtam
+Indic > Oriya > Oriya
+Indic > Gurumukhi
+Indic > Gurumukhi > Generic
+Indic > Gurumukhi > Sanskrtam
+Indic > Gurumukhi > Panjaabi
+Indic > Gujarati
+Indic > Gujarati > Generic
+Indic > Gujarati > Sanskrtam
+Indic > Gujarati > Gujarati
+Indic > Gujarati > Pahlavi-Avestan
+Indic > Kannada
+Indic > Kannada > Generic
+Indic > Kannada > Sanskrtam
+Indic > Kannada > Kannada
+Indic > Kannada > Konkani
+Indic > Telugu
+Indic > Telugu > Generic
+Indic > Telugu > Sanskrtam
+Indic > Telugu > Telugu
+Indic > Tamil
+Indic > Tamil > Generic
+Indic > Tamil > Tamil
+Indic > Tamil > Sanskrtam
+Indic > Malayalam
+Indic > Malayalam > Generic
+Indic > Malayalam > Sanskrtam
+Indic > Malayalam > Malayalam
+Indic > Sinhala
+Indic > Sinhala > Generic
+Indic > Sinhala > Sanskrtam
+Indic > Sinhala > Sinhala
+Alphabet
+Alphabet > Roman
+Alphabet > Roman > Generic
+Alphabet > Roman > Romanaksari
+Alphabet > Roman > IAST
+Alphabet > Roman > ITRANS
+Alphabet > Roman > Harvard-kyoto
+Alphabet > Roman > IPA
+West-Asian
+West-Asian > Perso-Arabic
+West-Asian > Perso-Arabic > Generic
+West-Asian > Perso-Arabic > Arabic
+West-Asian > Perso-Arabic > Persian
+West-Asian > Perso-Arabic > Urdu
+West-Asian > Perso-Arabic > Sindhi
+West-Asian > Perso-Arabic > Shahmukhi
+West-Asian > Perso-Arabic > Pashto
+West-Asian > Hebrew
+West-Asian > Hebrew > Generic
+West-Asian > Hebrew > Old
+West-Asian > Hebrew > Modern
+West-Asian > Aramaic
+West-Asian > Aramaic > Syriac
+West-Asian > Aramaic > Phoenician
+West-Asian > Egyptian
+West-Asian > Egyptian > Heiroglyphic
+West-Asian > Egyptian > Demotic
+West-Asian > South-Arabian
+West-Asian > South-Arabian > Ethiopian
+West-Asian > Pahlavi-Avestan
+West-Asian > Pahlavi-Avestan > Zend
+West-Asian > Pahlavi-Avestan > Avestan
+West-Asian > Cuneiform
+West-Asian > Cuneiform > Old-Persian
+West-Asian > Cuneiform > Hittite
+West-Asian > Cuneiform > Sumerian
+West-Asian > Cuneiform > Elamite
+Non-Unicode
+Non-Unicode > Tengwar
+Non-Unicode > Kharoshti

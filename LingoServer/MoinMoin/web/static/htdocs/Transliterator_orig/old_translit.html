@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript" src="old/dropdowntabfiles/dropdowntabs.js"></script>
+
+<!-- CSS for Drop Down Tabs Menu #1 -->
+<link rel="stylesheet" type="text/css" href="old/dropdowntabfiles/ddcolortabs.css" />
+<!-- CSS for Drop Down Tabs Menu #2 -->
+<link rel="stylesheet" type="text/css" href="old/dropdowntabfiles/bluetabs.css" />
+<script language="text/javascript" src="old/transcodes1.js" type="text/javascript"></script>
+<script language="text/javascript" src="old/translit.js" type="text/javascript"></script>
+<script language="text/javascript" src="old/examples.js" type="text/javascript"></script>
+<script language="text/javascript" src="old/interface.js" type="text/javascript"></script>
+
+
+<!--Remove these if embedding in tiki or other place where jquery-ui is already present-->
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/flick/jquery-ui-1.8.23.custom.css"/>
+<!--Can also include Google CDN links-->
+<!--Spinner code: this is slightly modified.-->
+<script type="text/javascript" src="js/ui.spinner.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ui.spinner.css"/>
+
+<script type="text/javascript" src="js/translit_interface.js"></script>
+<link rel="stylesheet" type="text/css" href="css/translit_interface.css"/>
+
+</head>
+<body onload="statusupdate('reset');">
+    
+	<span style="font-size:small">
+<div align="center"><div id="bluemenu" class="bluetabs">
+    <ul>
+      <li><a id="nindic" rel="nindic_menu" onMouseover="statusupdate(this.id);" href="javascript:void(0);">North Indic</a></li>
+      <li><a id="sindic" rel="sindic_menu" onMouseover="statusupdate(this.id);" href="javascript:void(0);">South Indic</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="seasian" rel="seasian_menu">South East Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="ceasian" rel="ceasian_menu">Central Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="middleeastern" rel="middleeastern_menu">West Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="african" rel="african_menu">African</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="alphab" rel="alphab_menu">European</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="easian" rel="easian_menu">East Asian</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="american" rel="american_menu">American</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="artif" rel="artif_menu">Artificial</a></li>
+      <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="fantasy" rel="fantasy_menu">Fantasy</a></li>
+	  <li><a onMouseover="statusupdate(this.id);" href="javascript:void(0);" id="translt" rel="translt_menu">Translit</a></li>
+    </ul>
+  </div>
+  <div id="nindic_menu" class="dropmenudiv_b"> 
+  
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="devanagari">Devanágarí(देवनागरी)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="eastnagari" title="Use Eastern Nagarí script (Bengali, Assamese, Bishnupriya Manipurí)" >Bánglá ( বাংলা )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="gujarati" title="Use script from Gujarát" >Gujarátí ( ગુજરાતી )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="guramukhi" title="Use script from Punjáb">Guramukhí ( ਗੁਰਮੁਖੀ )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);"  id="oriya" title="Use script from Orissa">Oð´iá ( ଓଡ଼ିଆ)</a></div>
+  <div id="sindic_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="kannada" title="Use Script from Karnáþaka">Kannaða ( ಕನ್ನಡ )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="telugu" title="Use Telugu script from Ándhrá">Telugu ( తెలుగు)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="tamil" title="Use Tamil Script">Tamiø´ ( தமிழ் )</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass" id="malayalam" title="Use Malayálam script from Keralá" >Malayáøam´ ( മലയാളം)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);" onMouseOver="statusupdate(this.id);" class="remClass"  id="sinhala" title="Use Singhala script from Shrí Langká" >Singhala ( සිංහල )</a> </div>
+  <div id="seasian_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="burmese" title="Use Script from Myanmar" >Myánmá Básá ( မြန်မာဘာသာ  )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="cambodian" title="Use script from Cambodia" >Cambodian Khmer ( ភាសាខ្មែរ) )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="thai" title="Use Script from Thailand" >Bhásá Thai ( ภาษาไทย )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="buhid" title="Use Buhid Script from Phillipines">Buhid ( )*</a> </div>
+  <div id="ceasian_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="tibetan" title="Use Script from Tibet">Tibetan ( དབུ་ཅན )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="phagspa" title="Use Phagspa Tibeto-Mongol Script" >Phagspa (  )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="mongol" title="Use Mongolian" >Mongol ( ) )*</a> </div>
+  <div id="middleeastern_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="persoarabic" title="Experimental Perso-Arabic support" >Perso-Arabic (أبجدية_عربية)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="hebrew" title="Experimental Hebrew support" >Hebrew (אָלֶף-בֵּית עִבְרִי)*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="syriac" title="Use Syriac Language" >Syriac ( ܣܘܪܝܝܐ )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="mandaic" title="Use Mandaic Script" >Mandaic ( TBD )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="avestan" title="Use Avestán Language" >Avestán ( TBD )*</a> </div>
+  <div id="african_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="geez" title="Use Gi\'iz Script" >Gi\'iz ( ግዕዝ )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="tifinagh" title="Use  Tifinagh Script" >Tifinagh ( )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="nko" title="Use Nko Script" >Nko ( )*</a> </div>
+  <div id="alphab_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="latin" title="Use Latin Script" >Latin (Látîn)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="cyrillic" title="Use Cyrillic script" >Cyrillic ( русский )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="greek" title="Use Greek script" >Greek ( ελληνικά )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="armenian" title="Use Armenian script">Armenian ( այբուբեն )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass" id="georgian" title="Use Georgian script" >Georgian ( ქართული  )*</a> </div>
+  <div id="easian_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="hangeul" title="Use Hangeul featural script from Korea" >Hangeul ( 한글 )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="bopomofo" title="Use Bopomofo script from China" >Bopomofo ( ㄅㄆㄇㄈ )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="hiragana" title="Use Hiragana Syllabary from Japan" >Hirágáná  ( ひらがな  )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="katakana" title="Use Kátákáná Syllabary from Japan" >Kátákáná  ( カタカナ )*</a> </div>
+  <div id="american_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="cree" title="Cree Syllabics" >Cree ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="blackfoot" title="Use Blackfoot Syllabary" >Blackfoot ( )*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"  id="inuktitut" title="Use Inuktitut Syllabics from Canada" >Inuktitut ( )*</a> </div>
+  <div id="artif_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="ipa" title="International Phonetic Alphabet">IPA (aɪ pͪiː eɪ)*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="braille" title="Braille dots">Braille ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="vspeech" title="Visible Speech script">Visible Speech ()*</a> </div>
+  <div id="fantasy_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="tengwar" title="Elvish script from Lord of the Rings.">Tèngwár (<span style="font-family:Tengwar Annatar";>1Vbç¨C¼</span>)</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="cirith" title="Dwarvish script from Lord of the Rings.">Cirith ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="shawian" title="Sir George Bernard Shaw\'s vision of perfect English"> Shawian ()*</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="klingon" title="Klingon script from Star wars">Klingon ()*</a> 
+	</div>
+	<div id="translt_menu" class="dropmenudiv_b"> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="iast" title="International Alphabet for Sanskrit Transliteration">IAST </a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="itrans" title="I-TRANS">ITRANS</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="xsampa" title="ASCII scheme for phonetic transcription">X-Sampa</a> 
+	<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="om" title="Another attempt at transliteration">Om</a> 
+<a href="javascript:void(0);" onClick="transtext_rmdv(this.id);"  onMouseOver="statusupdate(this.id);" class="remClass"   id="romenagari" title="ASCII Case-insensitive scheme for compiler backends">Romenagari</a> 
+
+	</div></div>
+<div id="source-toolbar" class="toolbar ui-widget-header ui-corner-all" style="float:left; width:50%;">
+			<span id="source_fontstyles">
+				<input type="checkbox" id="source_make_bold" class="make_bold"/><label for="source_make_bold" title="Bold"><span style="font-family:'Courier New',Courier,fixed; font-weight:900 !important;">B</span></label>
+				<input type="checkbox" id="source_make_italic" class="make_italic"/><label for="source_make_italic" title="Italic"><span style="font-family:'Courier New',Courier,fixed; font-style:italic;font-weight:300 !important;">I</span></label>
+			</span>
+			<span id="source_fontalign">
+				<input type="radio" id="source_align_left" class="align_left" name="source_align" checked="checked" /><label for="source_align_left" title="Left Align">⇇</label>
+				<input type="radio" id="source_align_center" class="align_center" name="source_align"/><label for="source_align_center" title="Center Align">⇆</label>
+				<input type="radio" id="source_align_right" class="align_right" name="source_align"/><label for="source_align_right" title="Right Align">⇉</label>
+				
+			</span>
+			<span style="padding:6px 2px;background:#f2f2f2;">
+			<input type="text" id="source_font" size="30" value="Droid Sans, Chandas" title="Choose the fonts for the box. Multiple fonts may be chosen"/>
+			</span><span style="padding:6px 2px;background:#f2f2f2;">
+			<label for="source_fontsize">size</label><input type="text" size="2" id="source_fontsize" value="14" title="Change size in px. Use mousewheel on me :-)"/></span><span style="padding:6px 2px;background:#f2f2f2;">
+			<label for="source_lineheight">height</label><input type="text" size="3" id="source_lineheight" value="1.0" title="Change line height. Use mousewheel on me :-)"/></span>
+			<span id="source_bidi_opts">
+			
+			<input type="radio" id="source_bidi_auto" class="bidi" name="source_bidi" checked="checked"/><label title="BIDI direction AUTO default"  for="source_bidi_auto">⇹</label>
+			<input type="radio" id="source_bidi_ltr" class="bidi" name="source_bidi"/><label for="source_bidi_ltr" title="BIDI direction Left to Right">↦</label>
+			<input type="radio" id="source_bidi_rtl" class="bidi" name="source_bidi" /><label for="source_bidi_rtl" title="BIDI direction Right to Left">↤</label>
+			<input type="checkbox" id="source_bidi_override" class="bidi_override" /><label for="source_bidi_override" title="BIDI Override (Force)">☢</label>
+			</span>
+			<h2>Romanákßarí Lipi</h2>
+			<textarea name="textarea3"   id="source_textarea" onchange="return transtext_rmdv(0)" onkeyup="return transtext_rmdv(0)" style="width: 100%; height: 600px;border:none; margin:0px;padding:0px;">This is the Romanákßarí or Latin Transcript box. Anything you type here will be transliterated to the Indic Script box. 
+    
+    </textarea>
+			</div>
+	
+<div id="target-toolbar" class="toolbar ui-widget-header ui-corner-all" style="float:left; width:49%;">
+			<span id="target_fontstyles">
+				<input type="checkbox" id="target_make_bold" class="make_bold"/><label for="target_make_bold" title="Bold"><span style="font-family:'Courier New',Courier,fixed; font-weight:900 !important;">B</span></label>
+				<input type="checkbox" id="target_make_italic" class="make_italic"/><label for="target_make_italic" title="Italic"><span style="font-family:'Courier New',Courier,fixed; font-style:italic;font-weight:300 !important;">I</span></label>
+			</span>
+			<span id="target_fontalign">
+				<input type="radio" id="target_align_left" class="align_left" name="target_align" checked="checked" /><label for="target_align_left" title="Left Align">⇇</label>
+				<input type="radio" id="target_align_center" class="align_center" name="target_align"/><label for="target_align_center" title="Center Align">⇆</label>
+				<input type="radio" id="target_align_right" class="align_right" name="target_align"/><label for="target_align_right" title="Right Align">⇉</label>
+				
+			</span>
+			<span style="padding:6px 2px;background:#f2f2f2;">
+			<input type="text" id="target_font" size="30" value="Droid Sans, Chandas" title="Choose the fonts for the box. Multiple fonts may be chosen"/>
+			</span><span style="padding:6px 2px;background:#f2f2f2;">
+			<label for="target_fontsize">size</label><input type="text" size="2" id="target_fontsize" value="14" title="Change size in px. Use mousewheel on me :-)"/></span><span style="padding:6px 2px;background:#f2f2f2;">
+			<label for="target_lineheight">height</label><input type="text" size="3" id="target_lineheight" value="1.0" title="Change line height. Use mousewheel on me :-)"/></span>
+			<span id="target_bidi_opts">
+			
+			<input type="radio" id="target_bidi_auto" class="bidi" name="target_bidi" checked="checked"/><label title="BIDI direction AUTO default"  for="target_bidi_auto">⇹</label>
+			<input type="radio" id="target_bidi_ltr" class="bidi" name="target_bidi"/><label for="target_bidi_ltr" title="BIDI direction Left to Right">↦</label>
+			<input type="radio" id="target_bidi_rtl" class="bidi" name="target_bidi" /><label for="target_bidi_rtl" title="BIDI direction Right to Left">↤</label>
+			<input type="checkbox" id="target_bidi_override" class="bidi_override" /><label for="target_bidi_override" title="BIDI Override (Force)">☢</label>
+			</span>
+			<h2><div id="activescr">Transcript</div></h2>
+			<textarea name="textarea2" id="target_textarea" style="width: 100%; height: 600px;border:none; margin:0px;padding:0px;" >This is the Indic script box (for देवनागरी , বাংলা, ಕನ್ನಡ, తెలుగు, ગુજરાતી, தமிழ், ਗੁਰਮੁਖੀ, മലയാളം, ଓଡ଼ିଆ , සිංහල or اُرْدُو ).
+    
+    </textarea>
+			</div>	
+	<div class="clear"></div>
+<div id="source_tabs" class="tabs"> <!-- top tabs -->
+		<ul>
+			<li><a href="#source_tabs-1">Target Language</a></li>
+			<li><a href="#source_tabs-2">Features and Ligatures</a></li>
+			<li><a href="#source_tabs-3">Examples</a></li>
+			<li><a href="#source_tabs-4">Status</a></li>
+			<li><a href="#source_tabs-5">Fonts Info.</a></li>
+			<li><a href="#source_tabs-6">About Script</a></li>
+			<li><a href="#source_tabs-7">Orthography</a></li>
+			
+		</ul>
+		<div id="source_tabs-1">
+		<input name="lang" id="generic" title="Choose generic conventions" onclick="return transtext_rmdv(0)" value="generic" type="radio" checked="checked"/>
+	    Generic : Used with languages like Dravidian. No postprocessing.<br/>
+	    <input name="lang" id="sanskrta" title="Choose Sanskrta conventions - which handles candrabindus differently and requires a Viráma at the end of words, unless they end witha schwa (a) " onclick="return transtext_rmdv(0)" value="sanskrta" type="radio" />
+	     Old Indic : Sanskrta, Pali, Prakrits. Sandhi postprocessing <br/>
+	    <input name="lang" class="style24" id="hindi" onclick="return transtext_rmdv(0)" title="Use New Indic conventions - like anunásiká nasal vowels, candrabindus and implied Viráma at end of words" value="hindi" type="radio" />
+	    Modern North Indian : Hindi, Marathi, Nepali, Bangla ... . Scibal conventions. Inherits Old Indic.</p>		
+		</div>
+		<div id="source_tabs-2"><p>Anusvára mode.:
+          <input name="anu" class="style24" id="anu" title="Anusvára mode - turns half-nasals into anusváras as appropriate. Useful for new Indic Languages. Turn off for Sanskrta" onclick="return transtext_rmdv(0)" value="checkbox" type="checkbox" />
+		</div>
+		<div id="source_tabs-3"><div  class="bluetabs">
+    <ul>
+      <li><a id="generic_ex" onClick="return generictext()" title="Loads a text showcasing all the features of this script. No script supports all features" href="javascript:void(0);">Generic</a></li>
+	  <li><a id="sanskrta_ex" onClick="return sanskrtatext()" title="Loads a Sanskrta Example text on the top box, with full capitalization" href="javascript:void(0);">Sanskrta</a></li>
+	  <li><a id="hindi_ex" onClick="return hinditext()" title="Loads a typical Hindí News article with added capitalization in top box" href="javascript:void(0);">Hindí</a></li>
+      </ul>
+  </div><div  class="bluetabs">
+    <ul>
+      <li><a id="clear" onClick="return clear_input()" href="javascript:void(0);">Clear</a></li>
+      </ul>
+  </div>
+		</div>
+		
+		<div id="source_tabs-4"><div id="status" ></div>
+		</div>
+		<div id="source_tabs-5"><p>Choosing the right fonts, and installing <b>Support for Complex Scripts is important</b>. This will depend on your operating system. Scripts like Devanágarí, Arabic etc. consist of shapes which change considerably in accordance with their surroundings. These ligatures are compulsary in these scripts, unlike the alphabetic scripts where ligatures are used for Aesthetic reasons. Directions also vary, even within the same script. Arabic writes right-to-left, but numbers are written left-to-right.</p>
+		<p>One can then install a Pan-Unicode font which support a large number of scripts. Their support for each script varies, and they may not be the best for a particular script, but get their job done. Some fonts like this are Code2000, Gentium, Arial Unicode MS (Microsoft Office). Most operating systems nowadays give good support for most common languages. Specialist fonts pay more attention to details though, and are more accurate, better to look at, and target a specific look and feel, or language.
+		</div>
+		<div id="source_tabs-6">Description of the target script. Info on recommended fonts useful for this script option.<div id="debug"></div>
+<input type="hidden" id="currentscript" value="devanagari">
+<input type="hidden" id="scriptcon" value="">
+<input type="hidden" id="langmode" value="generic">
+<input type="hidden" id="stylemode" value="">
+		</div>
+		<div id="source_tabs-7">Choose Orthography, such as Sanskrit, Hindi
+		</div>
+	
+	</div>	
+<form name="form1" id="form1" >
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("bluemenu");
+</script>
+
+</form>
+
+</span>
+<object id="fontListSWF" name="fontListSWF" type="application/x-shockwave-flash" data="FontList.swf" width="1" height="1" style="visibility:hidden;">
+    <param name="movie" value="FontList.swf"> <param name="AllowScriptAccess" value="always">	<embed src="FontList.swf" width="1" height="1" AllowScriptAccess="always"></embed>
+</object>
+
+</body>
+</html>
